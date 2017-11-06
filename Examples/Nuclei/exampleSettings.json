@@ -1,0 +1,45 @@
+{
+	"ch": {
+		"ProcInputChannels": [
+			1,
+			null
+		],
+		"ProcInputLabels": [
+			null,
+			1
+		],
+		"LabelSource": [1,2],
+		"ProcOutputLabels": [
+			1,
+			2
+		]
+	}
+}
+{
+	"seg": [
+		[
+			{
+				"Name": "DoGNucAZSeg",
+				"Labels": [
+					"Nucleus Size",
+					"Threshold Adjustment"
+				],
+				"Values": [
+					[28],
+					[0.005]
+				]
+			},
+			{
+				"Name": "PseudoCytoAZSeg",
+				"Labels": [
+					"Distance Threshold",
+					"Intensity weighting"
+				],
+				"Values": [
+					[50],
+					[0.8]
+				]
+			}
+		]
+	]
+}

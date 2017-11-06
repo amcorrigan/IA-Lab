@@ -1,0 +1,47 @@
+{
+	"ch": {
+		"ProcInputChannels": [
+			1,
+			4
+		],
+		"ProcInputLabels": [
+			null,
+			1
+		],
+		"LabelSource": [1,2],
+		"ProcOutputLabels": [
+			1,
+			2
+		]
+	}
+}
+{
+	"seg": [
+		[
+			{
+				"Name": "NucMonolayer3DAZSeg",
+				"Labels": [
+					"Nucleus Size",
+					"Threshold Adjustment",
+					"Size of interior holes"
+				],
+				"Values": [
+					[35],
+					[0.1],
+					[5]
+				]
+			},
+			{
+				"Name": "CytoMonolayer3DAZSeg",
+				"Labels": [
+					"Threshold Adjustment",
+					"Size of interior holes"
+				],
+				"Values": [
+					[0.1],
+					[5]
+				]
+			}
+		]
+	]
+}

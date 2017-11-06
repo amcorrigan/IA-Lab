@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bts:MeasurementSetting bts:Version="1.0" bts:ProductID="1009605002" bts:Application="" bts:Columns="12" bts:Rows="8" xmlns:bts="http://www.yokogawa.co.jp/BTS/BTSSchema/1.0">
+  <bts:Timelapse>
+    <bts:Timeline bts:Name="Time Line 1" bts:InitialTime="0" bts:Period="6703" bts:Interval="0" bts:ExpectedTime="247" bts:Color="#ff44ee66" bts:OverrideExpectedTime="false">
+      <bts:WellSequence bts:IsSelected="true">
+        <bts:TargetWell bts:Row="3" bts:Column="2">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="3" bts:Column="3">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="3" bts:Column="4">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="3" bts:Column="5">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="3" bts:Column="6">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="4" bts:Column="2">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="4" bts:Column="3">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="4" bts:Column="4">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="4" bts:Column="5">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="4" bts:Column="6">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="5" bts:Column="2">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="5" bts:Column="3">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="5" bts:Column="4">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="5" bts:Column="5">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="5" bts:Column="6">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="6" bts:Column="2">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="6" bts:Column="3">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="6" bts:Column="4">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="6" bts:Column="5">true</bts:TargetWell>
+        <bts:TargetWell bts:Row="6" bts:Column="6">true</bts:TargetWell>
+      </bts:WellSequence>
+      <bts:PointSequence bts:Method="FixedPosition">
+        <bts:FixedPosition bts:IsProportional="false">
+          <bts:Point bts:X="-1000" bts:Y="1000" />
+          <bts:Point bts:X="1000" bts:Y="1000" />
+          <bts:Point bts:X="1000" bts:Y="-1000" />
+          <bts:Point bts:X="-1000" bts:Y="-1000" />
+        </bts:FixedPosition>
+      </bts:PointSequence>
+      <bts:ActionList bts:RunMode="sequential">
+        <bts:ActionAcquire3D bts:XOffset="0" bts:YOffset="0" bts:AFShiftBase="1" bts:TopDistance="0" bts:BottomDistance="0" bts:SliceLength="1" bts:UseSoftFocus="false">
+          <bts:Ch>1</bts:Ch>
+        </bts:ActionAcquire3D>
+        <bts:ActionAcquire3D bts:XOffset="0" bts:YOffset="0" bts:AFShiftBase="6" bts:TopDistance="0" bts:BottomDistance="0" bts:SliceLength="1" bts:UseSoftFocus="false">
+          <bts:Ch>2</bts:Ch>
+        </bts:ActionAcquire3D>
+        <bts:ActionAcquire3D bts:XOffset="0" bts:YOffset="0" bts:AFShiftBase="8" bts:TopDistance="0" bts:BottomDistance="0" bts:SliceLength="1" bts:UseSoftFocus="false">
+          <bts:Ch>3</bts:Ch>
+        </bts:ActionAcquire3D>
+      </bts:ActionList>
+    </bts:Timeline>
+  </bts:Timelapse>
+  <bts:LightSourceList>
+    <bts:LightSource bts:Name="405nm" bts:Type="Laser" bts:WaveLength="405" bts:Power="70" />
+    <bts:LightSource bts:Name="488nm" bts:Type="Laser" bts:WaveLength="488" bts:Power="70" />
+    <bts:LightSource bts:Name="561nm" bts:Type="Laser" bts:WaveLength="561" bts:Power="70" />
+    <bts:LightSource bts:Name="640nm" bts:Type="Laser" bts:WaveLength="640" bts:Power="70" />
+  </bts:LightSourceList>
+  <bts:ChannelList>
+    <bts:Channel bts:Ch="1" bts:Target="Microscope Image" bts:ObjectiveID="20000" bts:Objective="20x" bts:Magnification="20" bts:MethodID="9" bts:Method="Confocal Fluorescence 405/488/561 nm" bts:FilterID="1" bts:Acquisition="BP445/45" bts:ExposureTime="500" bts:Binning="1" bts:Color="#FF002FFF" bts:MinLevel="0" bts:MaxLevel="0.74000707251063813" bts:Kind="ConfocalFluorescence" bts:AndorParameterID="32" bts:AndorParameter="Gain 1,4" bts:CameraType="Andor" bts:InputLevel="1000">
+      <bts:LightSourceName>405nm</bts:LightSourceName>
+    </bts:Channel>
+    <bts:Channel bts:Ch="2" bts:Target="Microscope Image" bts:ObjectiveID="20000" bts:Objective="20x" bts:Magnification="20" bts:MethodID="9" bts:Method="Confocal Fluorescence 405/488/561 nm" bts:FilterID="5" bts:Acquisition="BP525/50" bts:ExposureTime="500" bts:Binning="1" bts:Color="#FF00FFA1" bts:MinLevel="0" bts:MaxLevel="0.3313108328132911" bts:Kind="ConfocalFluorescence" bts:AndorParameterID="32" bts:AndorParameter="Gain 1,4" bts:CameraType="Andor" bts:InputLevel="1000">
+      <bts:LightSourceName>488nm</bts:LightSourceName>
+    </bts:Channel>
+    <bts:Channel bts:Ch="3" bts:Target="Microscope Image" bts:ObjectiveID="20000" bts:Objective="20x" bts:Magnification="20" bts:MethodID="9" bts:Method="Confocal Fluorescence 405/488/561 nm" bts:FilterID="6" bts:Acquisition="BP590/20" bts:ExposureTime="500" bts:Binning="1" bts:Color="#FFFFA200" bts:MinLevel="0" bts:MaxLevel="0.043071716701742917" bts:Kind="ConfocalFluorescence" bts:AndorParameterID="32" bts:AndorParameter="Gain 1,4" bts:CameraType="Andor" bts:InputLevel="10000">
+      <bts:LightSourceName>561nm</bts:LightSourceName>
+    </bts:Channel>
+  </bts:ChannelList>
+</bts:MeasurementSetting>

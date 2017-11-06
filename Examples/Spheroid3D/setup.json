@@ -1,0 +1,59 @@
+{
+	"ch": {
+		"ProcInputChannels": [
+			2,
+			1,
+			1
+		],
+		"ProcInputLabels": [
+			null,
+			1,
+			null
+		],
+		"LabelSource": [1,2,3],
+		"ProcOutputLabels": [
+			1,
+			2,
+			3
+		]
+	}
+}
+{
+	"seg": [
+		[
+			{
+				"Name": "AZSeg2DSpheroid",
+				"Labels": [
+					"Algorithm Type"
+				],
+				"Values": 1
+			},
+			{
+				"Name": "NoisySpheroid3DAZSeg",
+				"Labels": [
+					"Threshold adjustment",
+					"Minimum Size"
+				],
+				"Values": [
+					[0.01],
+					[-1]
+				]
+			},
+			{
+				"Name": "SpheroidNucleiAZSeg",
+				"Labels": [
+					"Size in XY",
+					"Size in Z",
+					"Intensity threshold",
+					"Background smoothing"
+				],
+				"Values": [
+					[3.6],
+					[1.5],
+					[10],
+					[2.2]
+				]
+			}
+		]
+	]
+}
