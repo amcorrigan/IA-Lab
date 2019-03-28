@@ -2,6 +2,12 @@ IALab Core Framework
 ====================
 This is the central repo for the IALab software, including **parsers** of various microscopy experiments, into **multidimensional and multichannel images**, and core code for **segmentation**, **measurement**, **export** of results and **display** of images and results .  Some example workflows are stored in the Examples directory.
 
+## Installation Instructions
+As well as directly cloning the repo, installation as a MATLAB toolbox is available from this link:
+https://az.app.box.com/s/sth2742g6fu2i3ag1n1y1xi2ijd0da89
+
+This shared folder also contains example datasets for analysis in IALab
+
 ## Dependencies
 MATLAB (tested on R2014b, R2017b)
 
