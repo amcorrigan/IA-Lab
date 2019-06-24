@@ -30,7 +30,11 @@ classdef BasicNucAZSeg < AZSeg
             % set up the interactive parameter tuning
             this = this@AZSeg({'NucRadius','RelThresh'},...
                 {'Radius of Nuclei','Threshold Adjustment'},...
-                'Nucleus Detection',1,0,1); % 1,0,1 is the default, could be left out
+                'Nucleus Detection',...
+                1,... Number of input channels
+                0,... Number of input segmentation masks
+                1); % Number of output segmentation masks
+                % 1,0,1 is the default, could be left out
             
             if nargin>0 && ~isempty(nucrad)
                 this.NucRadius = nucrad;
@@ -52,7 +56,6 @@ classdef BasicNucAZSeg < AZSeg
 		%> @return L label matrix of detected nuclei
 		% ======================================================================
         function L = process(this,im,~,~)
-            % original working code is in faintnucseg.m
             
             % this kind of input checking can be farmed out to specialized
             % superclasses

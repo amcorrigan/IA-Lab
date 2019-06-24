@@ -114,8 +114,9 @@ ee.addExporter(MatLabelAZExport(),@multiLabelFile);
 % saved, the options are 'SingleCell','Field', or 'Both'
 ee.addExporter(MatStatsAZExport(),@multiStatsFile,'both');
 
-% Export results to csv file (in this case semicolon-separated-value)
-ee.addExporter(SemicolonSeparatedAZExport(),@multiCSVFile_OneFile);
+% Export results to csv file (in this case tab-separated-value)
+% % ee.addExporter(SemicolonSeparatedAZExport(),@multiCSVFile_OneFile);
+ee.addExporter(DelimitedExport(),@multiCSVFile_OneFile); % defaults to tsv
 
 % also include QC images for each segmentation step
 % The QCImageAZExport class exports images overlaid with segmentation

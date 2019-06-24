@@ -14,7 +14,7 @@ end
 
 
 nucchan = 1;
-cytochan = 4;
+cytochan = 2;
 
 % Set up segmentation part of workflow
 % Individual segmentation steps, eg nuclear segmentation, are written as
@@ -32,7 +32,7 @@ ss = SegmentationManager();
 % used outside the framework on individual image and label matrices
 
 % supply pre-processing options for each of the input channels
-isettings = {'full','full','full','full'}; % make sure that the images are processed in 2D, even if they have z-slices
+isettings = {'full','full'}; % make sure that the images are processed in 2D, even if they have z-slices
 ss.supplyInputSettings(isettings);
 
 % create a nuclear segmentation object with initial settings
@@ -88,7 +88,7 @@ mm.addMeasurement(nucMorphMeas,1,nucchan);
 
 % add further measurements
 
-mm.addMeasurement(BasicIntensityAZMeasure('Cyto'),2,1:4);
+mm.addMeasurement(BasicIntensityAZMeasure('Cyto'),2,1:2);
 
 % Finally, an ExportManager handles the output of results as tables,
 % mat-files and QC images
@@ -115,8 +115,9 @@ ee.addExporter(MatLabelAZExport(),@multiLabelFile);
 % saved, the options are 'SingleCell','Field', or 'Both'
 ee.addExporter(MatStatsAZExport(),@multiStatsFile,'both');
 
-% Export results to csv file (in this case semicolon-separated-value)
-ee.addExporter(SemicolonSeparatedAZExport(),@multiCSVFile_OneFile);
+% Export results to csv file (in this case tab-separated-value)
+% % ee.addExporter(SemicolonSeparatedAZExport(),@multiCSVFile_OneFile);
+ee.addExporter(DelimitedExport(),@multiCSVFile_OneFile);
 
 % at the end the managers are brought together into a workflow
 % the HCWorkFlow object encapsulates the code for batch running, running in
